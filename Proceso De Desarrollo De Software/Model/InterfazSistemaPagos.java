@@ -35,5 +35,4 @@ public class InterfazSistemaPagos {
         // Simular el envío de un recordatorio de pago
         System.out.println("Enviando recordatorio de pago para la cita: " + cita.getId() + " - " + cita.getDescripcion());
     }
-hola tontin
 }

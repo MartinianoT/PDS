@@ -5,6 +5,7 @@ import java.util.*;
 public class HistorialMedico {
     private Paciente paciente;
     private List<CitaMedica> citasMedicas;
+    private int prueba;
 
 
     public HistorialMedico(Paciente paciente, List<CitaMedica> citasMedicas) {

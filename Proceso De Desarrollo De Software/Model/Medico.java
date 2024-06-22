@@ -1,46 +1,58 @@
 
 import java.util.*;
 
-/**
- * 
- */
 public class Medico {
+
+    private String nombre;
+
+    private String apellido;
+
+    private EspecialidadMedica especialidad;
+
+    private Integer iDMedico;
 
     /**
      * Default constructor
      */
-    public Medico(nombre: String, apellido:String, especialidad: EspecialidadMedica, iDMedico: Integer) {
+    public Medico(String nombre, String apellido, EspecialidadMedica especialidad, Integer iDMedico) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.especialidad = especialidad;
         this.iDMedico = iDMedico;
     }
 
-    /**
-     * 
-     */
-    private String nombre;
+    /* Getters */
+    public String getNombre() {
+        return nombre;
+    }
 
-    /**
-     * 
-     */
-    private String apellido;
+    public String getApellido() {
+        return apellido;
+    }
 
-    /**
-     * 
-     */
-    private EspecialidadMedica especialidad;
+    public EspecialidadMedica getEspecialidad() {
+        return especialidad;
+    }
 
-    /**
-     * 
-     */
-    private Integer iDMedico;
+    public Integer getiDMedico() {
+        return iDMedico;
+    }
 
-    /**
-     * 
-     */
-    public void <constructor>+Medico()() {
-        // TODO implement here
+    /* Setters */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setEspecialidad(EspecialidadMedica especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public void setiDMedico(Integer iDMedico) {
+        this.iDMedico = iDMedico;
     }
 
 }

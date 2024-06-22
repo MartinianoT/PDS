@@ -6,10 +6,9 @@ import java.util.*;
  */
 public class InterfazSistemaPagos {
 
-    /**
-     * Default constructor
-     */
+   private PagosAdapter pagosAdapter;
     public InterfazSistemaPagos() {
+         this.pagosAdapter = new PagosAdapter();
     }
 
     /**
@@ -17,8 +16,11 @@ public class InterfazSistemaPagos {
      * @return
      */
     public void procesarPago(Factura factura) {
-        // TODO implement here
-        return null;
+       if (factura == null) {
+            throw new IllegalArgumentException("La factura no puede ser nula");
+        }
+        
+        pagosAdapter.procesarPago(factura);
     }
 
     /**
@@ -26,8 +28,12 @@ public class InterfazSistemaPagos {
      * @return
      */
     public void enviarRecordatorioPago(CitaMedica cita) {
-        // TODO implement here
-        return null;
+    if (cita == null) {
+            throw new IllegalArgumentException("La cita médica no puede ser nula");
+        }
+        
+        // Simular el envío de un recordatorio de pago
+        System.out.println("Enviando recordatorio de pago para la cita: " + cita.getId() + " - " + cita.getDescripcion());
     }
 
 }

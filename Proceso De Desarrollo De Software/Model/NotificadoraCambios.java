@@ -1,47 +1,43 @@
-
 import java.util.*;
 
-/**
- * 
- */
+
 public class NotificadoraCambios {
 
-    /**
-     * Default constructor
-     */
-    public NotificadoraCambios() {
-    }
-
-    /**
-     * 
-     */
     private Suscriptor suscriptores;
+    private String evento
 
-    /**
-     * @param Suscriptor 
-     * @return
-     */
-    public void agregarSuscriptor(void Suscriptor) {
-        // TODO implement here
-        return null;
+
+ 
+    public List<Suscriptor> getSuscriptores() {
+        return suscriptores;
     }
 
-    /**
-     * @param Suscriptor 
-     * @return
-     */
-    public void eliminarSuscriptor(void Suscriptor) {
-        // TODO implement here
-        return null;
+    public void setSuscriptores(List<Suscriptor> suscriptores) {
+        this.suscriptores = suscriptores;
     }
 
-    /**
-     * @param evento 
-     * @return
-     */
-    public void notificarSuscriptores(void evento) {
-        // TODO implement here
-        return null;
+    public String getEvento() {
+        return evento;
     }
 
+    public void setEvento(String evento) {
+        this.evento = evento;
+    }
+
+  
+    public void agregarSuscriptor(Suscriptor suscriptor) {
+        this.suscriptores.add(suscriptor);
+    }
+
+    
+    public void eliminarSuscriptor(Suscriptor suscriptor) {
+        this.suscriptores.remove(suscriptor);
+    }
+
+
+    public void notificarSuscriptores(String evento) {
+        for (Suscriptor suscriptor : suscriptores) {
+            suscriptor.notificar(evento);
+        }
+    }
 }

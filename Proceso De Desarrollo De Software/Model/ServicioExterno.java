@@ -16,7 +16,9 @@ public class ServicioExterno implements InterfazServicioExterno {
      * @param factura
      */
     public void procesarPago(Factura factura) {
-        // TODO implement here
+        Aquí retornamos true si el pago es exitoso, false en caso contrario
+        boolean pagoExitoso = true; 
+        factura.setEstadoPago(pagoExitoso);// Valor de retorno simulado
     }
 
     /**

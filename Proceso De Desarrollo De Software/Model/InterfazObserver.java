@@ -1,15 +1,9 @@
 
 import java.util.*;
 
-/**
- * 
- */
+
 public interface InterfazObserver {
 
-    /**
-     * @param evento 
-     * @return
-     */
-    public void notificar(void evento);
+    public void notificar(String message);
 
 }

@@ -1,95 +1,52 @@
-
 import java.util.*;
 
-/**
- * 
- */
 public class Tratamiento {
 
-    /**
-     * Default constructor
-     */
-    public Tratamiento() {
+    public Tratamiento(Integer idTratamiento, String descripcion, CitaMedica citaMedica, Date fechaRealizacion) {
+        this.idTratamiento = idTratamiento;
+        this.descripcion = descripcion;
+        this.citaMedica = citaMedica;
+        this.fechaRealizacion = fechaRealizacion;
     }
 
-    /**
-     * 
-     */
     private Integer idTratamiento;
 
-    /**
-     * 
-     */
     private String descripcion;
 
-    /**
-     * 
-     */
     private CitaMedica citaMedica;
 
-    /**
-     * 
-     */
-    private DateTime fechaRealizacion;
+    private Date fechaRealizacion;
 
-    /**
-     * @param descripcion 
-     * @param fechaRealizacion 
-     * @param citaMedica
-     */
-    public void <constructor>+Tratamiento(void descripcion, void fechaRealizacion, void citaMedica) {
-        // TODO implement here
+    public Integer getIdTratamiento() {
+        return idTratamiento;
     }
 
-    /**
-     * @return
-     */
-    public String obtenerDescripcion() {
-        // TODO implement here
-        return "";
+    public void setIdTratamiento(Integer idTratamiento) {
+        this.idTratamiento = idTratamiento;
     }
 
-    /**
-     * @return
-     */
-    public DateTime obtenerFechaRealizacion() {
-        // TODO implement here
-        return null;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    /**
-     * @return
-     */
-    public CitaMedica obtenerCitaMedica() {
-        // TODO implement here
-        return null;
-    }
-
-    /**
-     * @param descripcion 
-     * @return
-     */
     public void setDescripcion(String descripcion) {
-        // TODO implement here
-        return null;
+        this.descripcion = descripcion;
     }
 
-    /**
-     * @param fechaRealizacion 
-     * @return
-     */
-    public void setFechaRealizacion(DateTime fechaRealizacion) {
-        // TODO implement here
-        return null;
+    public CitaMedica getCitaMedica() {
+        return citaMedica;
     }
 
-    /**
-     * @param citaMedica 
-     * @return
-     */
     public void setCitaMedica(CitaMedica citaMedica) {
-        // TODO implement here
-        return null;
+        this.citaMedica = citaMedica;
+    }
+
+    public Date getFechaRealizacion() {
+        return fechaRealizacion;
+    }
+
+    public void setFechaRealizacion(Date fechaRealizacion) {
+        this.fechaRealizacion = fechaRealizacion;
     }
 
 }

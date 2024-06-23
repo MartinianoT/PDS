@@ -1,6 +1,3 @@
-
-import java.util.*;
-
 public class Medico {
 
     private String nombre;
@@ -10,18 +7,13 @@ public class Medico {
     private EspecialidadMedica especialidad;
 
     private Integer iDMedico;
+    
+  public Medico(String nombre, String apellido, EspecialidadMedica especialidad, Integer iDMedico) {
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.especialidad = especialidad;
+      this.iDMedico = iDMedico;}
 
-    /**
-     * Default constructor
-     */
-    public Medico(String nombre, String apellido, EspecialidadMedica especialidad, Integer iDMedico) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.especialidad = especialidad;
-        this.iDMedico = iDMedico;
-    }
-
-    /* Getters */
     public String getNombre() {
         return nombre;
     }
@@ -38,7 +30,6 @@ public class Medico {
         return iDMedico;
     }
 
-    /* Setters */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

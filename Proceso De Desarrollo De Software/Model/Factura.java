@@ -12,13 +12,16 @@ public class Factura {
 
     private int descuento;
 
+    private CostoStrategy descuentoFinal;
+
     public Factura(CitaMedica cita, Double monto, boolean estadoPago, Boolean jubilado, String seguroMedico,
-            int descuento) {
+            int descuento, CostoStrategy descuentoFinal) {
         this.cita = cita;
         this.monto = monto;
         this.estadoPago = estadoPago;
         this.seguroMedico = seguroMedico;
         this.descuento = descuento;
+        this.descuentoFinal = descuentoFinal;
     }
 
     public CitaMedica getCita() {
@@ -61,30 +64,27 @@ public class Factura {
         this.descuento = descuento;
     }
 
-    public CostoStrategy obtenerMontoFinal() {
-        return Contexto();
+    public CostoStrategy getdescuentoFinal() {
+        return descuentoFinal;
     }
 
-/*public class Contexto {
-    
-private CostoStrategy estrategia;
+    public void setdescuentoFinal(CostoStrategy descuentoFinal) {
+        if( getJubilado() == true && descuento != 0){
+            this.descuentoFinal = descuento + 15;
+        }
+        elif (getJubilado() == true && descuento == 0);{
+            this.descuentoFinal = 15;
+        }
+        elif (getJubilado() == false && descuento != 0);{
+            this.descuentoFinal = descuento;
+        }
+        elif (getJubilado() == false || descuento == 0);{
+            this.descuentoFinal = 0;
+        }
+    }
 
-public Contexto(CostoStrategy estrategia){
-    this.estrategia = estrategia;   
-}
+    public double obtenerMontoFinal(double descuentoFinal, double monto){
+        return descuentoFinal.obtenerMontoFinal(descuentoFinal, monto);
+    }
 
-public CostoStrategy getEstrategia() {
-    return estrategia;
-}
-
-public void setEstrategia(CostoStrategy estrategia) {
-    if(Factura.getJubilado() == true || Factura.getDescuento() != 0);
-}
-
-public double obtenerCosto(){
-    
-}
-
-}
-*/
 }
